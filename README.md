@@ -1,4 +1,4 @@
-# Es6ArrayMethods
+# Es6 & Array Methods
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 

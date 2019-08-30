@@ -1,20 +1,85 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+ES6 (ES2015) new features
+
+
+1) Default Parameters
+
+function multiply(x=1,y=1){
+return x*y;
+}
+
+2) Template Literals
+
+var greeting = "Hello ${first} ${last}! Welcome back!";
+
+3) Multi-line Strings
+
+var multiline = `This on the other hand,
+actually is a multi-line string,
+thanks to JavaScript ES6`
+
+4) Block Scope for Let and Const
+
+5) True Classes
+
+6) New Array Functions
+
+Generally speaking, array functions usually aren't necessary in a language, but they do make things simpler. These helper functions cut down on the overall bulk of your code and save you from writing and rewriting similar patterns. So, while array helper functions won't make or break your code, they actually might help stop you from breaking your code.
+
+forEach
+This one doesn't follow the pattern you probably think, "for x in array," but it can be used in a similar way. It iterates over an array and passes the values from that array into a designated function.
+
+var numbers = [1, 2, 3, 4, 5];
+function timesTwo(number){
+console.log(number*2);
+}
+numbers.forEach(timesTwo);
+
+map
+Map functions are reasonably common. They allow you to perform an action to each element in an array, and create a new array containing the results.
+
+var numbers = [1, 2, 3, 4, 5];
+function timesTwo(number){
+return number*2;
+}
+var doubleNumbers = numbers.map(timesTwo);
+console.log(doubleNumbers);
+
+filter
+The 'filter' function checks each element in an array to see if it meets a certain condition and adds it to a new array if it does. In doing so, it creates a new subset of the original array.
+
+var numbers = [1, 2, 3, 4, 5];
+function isOdd(number){
+if(number % 2){
+return number;
+}
+  }
+var oddNumbers = numbers.filter(isOdd);
+console.log(oddNumbers);
+There are several more array functions added with ES6, like every, some, and find, but these are probably the ones you'll use most.
+
+7) Arrow Functions
+
+var multiply = (x, y) => x*y;
+
+$('.btnSend').click( (event) => {
+this.sendMail();
+});
+
+
+8) Improved Object Literals
+
+9) Destructuring
+
+var randomData = {a: 12, b: false, c: 'blue'};
+var {a, c} = randomData;
+
+10) Promises
+
+var asyncPromise = new Promise((resolve, reject) => {
+console.log('Doing the first thing async...');
+resolve();
+}).then(() => {
+console.log('Doing something else...');
+})
+
 
